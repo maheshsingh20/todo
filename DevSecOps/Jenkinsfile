@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage("Clone Code") {
             steps {
-                git url: "https://github.com/mihir280/Todo_APP.git", branch: "master"
+                git url: "https://github.com/maheshsingh20/todo.git", branch: "master"
                 echo "Code Cloned Successfully"
             }
         }
 
         stage("Build Docker Image") {
             steps {
-                sh 'docker build -t mihir064/node-app:latest .'
+                sh 'docker build -t maheshsingh20/todo:latest .'
                 echo "Docker Image Built Successfully"
             }
         }
